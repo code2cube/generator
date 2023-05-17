@@ -8,6 +8,14 @@ function lol() {
         pass += characters.substring(rand, rand + 1);
     }
     pass_text.innerText = pass;
+
+    const port_text = document.getElementById("server-port");
+    let port = "";
+    port += Math.floor(Math.random() * 5);
+    for(let i = 0; i < 4; i++) {
+        port += Math.floor(Math.random() * 9)
+    }
+    port_text.innerText = port;
 }
 
 window.addEventListener('load', lol)
